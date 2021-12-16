@@ -1,21 +1,25 @@
 import 'dart:io';
+
+import 'room3.dart';
 class Room1 {
-  String rightOrLeft;
+  String yesOrNo;
+
   Room1() {
-    print('''Welcome You are now in the reception
-         \nR Turn right \nL Turn left. \nOther characters are not allowed.
-        \n Enter here: ''');
-    rightOrLeft= stdin.readLineSync().toUpperCase();
+    print('''Welcome to the first task. The door to the next room is closed. So you have to answer the following question.
+         \nIs 1 the Fibonacci of 1? 
+        ''');
     bool ans = true;
-    while(ans){
-      print('Enter R or L: ');
-      rightOrLeft= stdin.readLineSync().toUpperCase();
-      if(rightOrLeft == 'R'){
+    while (ans) {
+      print('Enter Y or N: ');
+      yesOrNo = stdin.readLineSync().toUpperCase();
+      if (yesOrNo == 'Y') {
         print('Now you are in the Room 3');
         ans = false;
-      } else if(rightOrLeft == 'L'){
-        print('Now you are in the Room 4');
+        Room7 room7 = Room7();
+      } else if (yesOrNo == 'N') {
+        print('Now you are stil in the Room1');
         ans = false;
+        Room1 room1 = Room1();
       }
     }
   }

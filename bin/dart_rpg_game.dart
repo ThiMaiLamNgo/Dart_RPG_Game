@@ -1,44 +1,37 @@
 import 'dart:io';
 
-import 'get_door_number.dart';
-//import 'get_door_number.dart';
+import 'get_number.dart';
+//import 'get_number.dart';
 //import 'user_name.dart';
 void main(List<String> arguments) {
-  Room3();
+  Room4();
 }
-class Room3 {
-
-
-  Room3() {
-
+class Room4 {
+  int input;
+  Room4() {
     print(''' This room exhibits bear related stuff. But it is locked. 
-    \nYou have to answer a question to open it. 
-    
+    You have to answer a question to open it. 
+    \nHow heavy are polar bears? 
+    P/S: Only an integer number is allowed.
      ''');
-    bool answer= true;
-    String input;
-    int intNumber;
-    while (true) {
+
+    while (true){
       print("Enter the number: ");
-      input = stdin.readLineSync();
-      try {
-        intNumber = int.parse(input);
+      input = int.parse(stdin.readLineSync());
+      if (input >= 300 && input < 700) {
+        print('Your answer is right. Polar bears are about 300kg to 700 kg.');
+        print('You opened the room!');
         break;
-        //todo here
-      }
-      on FormatException {
-        print('Wrong format');
+      } else if (input < 300) {
+        print('Enter a higher number.');
+      } else{
+        print('Your number is too high.');
       }
     }
 
-    if(intNumber == 1){
-      print('You are in Room3 ');
-    } else if(intNumber == 2){
-      print('You are in Room5 ');
-    } else if(intNumber == 3){
-      print('You are in Room1 ');
-    } else{
-      print('Game over');
+    if (input >= 300 && input < 700) {
+      print('goto the room5');
+     // Room5 room5 = Room5();
     }
   }
 }

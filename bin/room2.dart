@@ -4,8 +4,8 @@ class Room2 {
 
   Room2() {
 
-    print('''There are there three numbers, 1, 2 and 3 on table.
-    \nChoose one of them to continue other numbers make game over''');
+    print('''This is coffee shop. There are there three numbers 1, 2 and 3 on table.
+    \nChoose one of them to continue, other numbers make game over''');
     bool answer= true;
     String input;
     int intNumber;
@@ -23,11 +23,11 @@ class Room2 {
     }
     // if the user enter 1 or 2 or 3 he can continue, enter other numbers the game is over.
     if(intNumber == 1){
-      print('You are in Room3 ');
+      print('You are in Room3');
     } else if(intNumber == 2){
-      print('You are in Room5 ');
+      print('You are in Room5');
     } else if(intNumber == 3){
-      print('You are in Room1 ');
+      print('You are in Room1');
     } else{
       print('Game over');
     }
