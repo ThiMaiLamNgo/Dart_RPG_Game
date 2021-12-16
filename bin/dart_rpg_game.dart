@@ -1,14 +1,28 @@
 import 'dart:io';
 import 'user_name.dart';
 void main(List<String> arguments) {
-  getStart getstart = getStart();
+  Room1();
 }
-class getStart{
-  int start;
-  getStart(){
-    print('Enter 1; 2; 3 or 4 to start your journey.'
-        ' \n1 Go ahead. \n2 Turn left. \n3 Turn right. \n4 The door is closed.');
-    start = int.parse(stdin.readLineSync());
-    print('ok');
+class Room1 {
+  String yesOrNo;
+
+  Room1() {
+    print('''Welcome You are now in the reception
+         \nR Turn right \nL Turn left. \nOther characters are not allowed.
+        \n Enter here: ''');
+     yesOrNo= stdin.readLineSync().toUpperCase();
+     bool ans = true;
+     while(ans){
+       print('Enter R or L: ');
+       yesOrNo= stdin.readLineSync().toUpperCase();
+       if(yesOrNo == 'R'){
+         print('Now you are in the Room 3');
+         ans = false;
+       } else if(yesOrNo == 'L'){
+         print('Now you are in the Room 4');
+         ans = false;
+       }
+     }
+
   }
 }
