@@ -1,14 +1,23 @@
 import 'dart:io';
 import 'dart_rpg_game.dart';
+import 'room1.dart';
 import 'user_name.dart';
 import 'start.dart';
 void main(List<String> arguments) {
+
+
   // TODO 1: Get user´s name
   getUserName getName = getUserName();
   // TODO 2: Choose 1 number to start Room1: 1,2,3,4.
   Start getstart = Start();
-  //TODO 3: Room1 : 1,2:
+  /*
+  //TODO 3: If choose 1 enter Room1 : 1,2:
   Room1 room1 = Room1();
+  //Todo 4: if choose 2: enter room2;
+  Room3 room2 = Room3();
+
+
+   */
 
 }
 
@@ -17,7 +26,7 @@ void main(List<String> arguments) {
 //TODO 4: help him to random the number 1,2,3 if he wants.
 //TODO 5: Ask a question if right go to m, wrong go to n. he can answer x times.
 //TODO 6: doan chu bat ky - 1 mini Hangman
-//TODo 7: fibonacci
+//TODo 7: fibon
 
 /*
 Choose assignment

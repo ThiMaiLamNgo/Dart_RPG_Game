@@ -1,27 +1,26 @@
 import 'dart:io';
+/*
 void main(){
-  getDoorNumber();
+  getNumber();
 }
-int getDoorNumber() {
+
+ */
+int getNumber() {
+  String input;
   //print('Enter a number here: ');
-  bool input = true;
-  String n1;
+  bool answer= true;
+  int intNumber;
+
   while (true) {
     print("Enter the number: ");
-    n1 = stdin.readLineSync();
-    if (n1 == 'q') {
-      break;
-    }
-
+    input = stdin.readLineSync();
     try {
-      print(int.parse(n1));
+      intNumber = int.parse(input);
       break;
+      //todo here
     }
     on FormatException {
       print('Wrong format');
-    }
-    catch (e, s) {
-      print('st wrong ... $e');
     }
   }
 }
