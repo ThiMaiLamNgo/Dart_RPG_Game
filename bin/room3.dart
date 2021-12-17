@@ -1,6 +1,10 @@
-import 'dart:io';
-import 'dart_rpg_game.dart';
-
+import 'get_number.dart';
+import 'room4.dart';
+/*
+void main(){
+  Room3 room3 = Room3();
+}
+ */
 class Room3 {
   int input;
   Room3() {
@@ -9,15 +13,15 @@ class Room3 {
     \nHow heavy are polar bears? 
     P/S: Only an integer number is allowed.
      ''');
+
     bool answer = true;
     while (answer){
-      print("Enter the number: ");
-      input = int.parse(stdin.readLineSync());
+      input = getNumber();
       if (input >= 300 && input < 700) {
         answer = false;
         print('Your answer is right. Polar bears are about 300kg to 700 kg.');
-        print('You opened the room! You are in Room5.');
-        Room4 room4 = Room4();
+        print('You opened the room and get the letter E!\n You are in Room4.');
+        Room4();
       } else if (input < 300) {
         print('Enter a higher number.');
       } else{

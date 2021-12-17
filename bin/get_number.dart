@@ -12,14 +12,11 @@ int getNumber( ) {
     try {
       intNumber = int.parse(input);
       answer = false;
-
     }
     on FormatException {
       print('Wrong format');
     }
   }
   return intNumber;
-  //print(intNumber);
-
 }
 

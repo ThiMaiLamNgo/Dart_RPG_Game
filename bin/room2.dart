@@ -10,13 +10,13 @@ class Room2 {
     int intNumber = getNumber();
     if(intNumber == 1){
       print('You are in Room3');
-      Room3 room3 = Room3();
+      Room3();
     } else if(intNumber == 2){
       print('You are in Room5');
-      Room5 room5 = Room5();
+      Room5();
     } else if(intNumber == 3){
       print('You are in Room1');
-      Room1 room1 = Room1();
+      Room1();
     } else{
       print('Game over');
     }

@@ -1,15 +1,12 @@
-import 'dart:io';
-import 'dart_rpg_game.dart';
-import 'room1.dart';
 import 'user_name.dart';
 import 'start.dart';
 void main(List<String> arguments) {
 
 
   // TODO 1: Get user´s name
-  getUserName getName = getUserName();
+  GetUserName();
   // TODO 2: Choose 1 number to start Room1: 1,2,3,4.
-  Start getstart = Start();
+  Start();
   /*
   //TODO 3: If choose 1 enter Room1 : 1,2:
   Room1 room1 = Room1();

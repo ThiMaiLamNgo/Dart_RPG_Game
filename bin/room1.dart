@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'room3.dart';
 import 'room7.dart';
 class Room1 {
   String yesOrNo;
@@ -16,11 +15,14 @@ class Room1 {
       if (yesOrNo == 'Y') {
         print('Now you are in the Room7');
         ans = false;
-        Room7 room7 = Room7();
+        Room7();
       } else if (yesOrNo == 'N') {
-        print('Now you are still in the Room1');
         ans = false;
-        Room1 room1 = Room1();
+        print('Wrong answer! You are still in the Room1. \n');
+        Room1();
+      }
+      else{
+        print('Enter Y or N');
       }
     }
   }

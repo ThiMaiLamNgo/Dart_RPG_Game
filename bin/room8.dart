@@ -14,10 +14,10 @@ class Room8 {
     \n1 to back to Room1 \n2 To go back to start.''');
     int input = getNumber();
     if (input == 1){
-      Room1 room1= Room1();
+      Room1();
     } else if (input == 2){
       print('The killer is here. You are back to start');
-      Start start = Start();
+      Start();
     }
   }
 }
