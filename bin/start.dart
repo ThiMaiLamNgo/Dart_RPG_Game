@@ -1,13 +1,12 @@
 import 'dart:io';
-import 'room2.dart';
 import 'room1.dart';
-import 'room3.dart';
+import 'room8.dart';
 
 class Start{
   int start;
   Start(){
     print('''You are in a room inside the Perlan. There are two ways you can choice. 
-         \n1 Go ahead. \n3 Turn right.
+         \n1 Go ahead. \n2 Turn right.
         \nEnter 1 or 2 to start your journey. and other numbers to get out of the game. ''');
     start = int.parse(stdin.readLineSync());
     if(start == 1){

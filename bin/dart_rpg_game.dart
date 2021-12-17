@@ -17,7 +17,7 @@ class Room4 {
 
     while (true){
       print("Enter the number: ");
-      input = int.parse(stdin.readLineSync());
+      input = getNumber();
       if (input >= 300 && input < 700) {
         print('Your answer is right. Polar bears are about 300kg to 700 kg.');
         print('You opened the room!');

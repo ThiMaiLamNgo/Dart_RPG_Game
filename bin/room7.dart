@@ -1,8 +1,8 @@
 import 'dart:io';
-
-import 'dart:math';
-
+import 'get_number.dart';
 import 'room2.dart';
+import 'room3.dart';
+import 'room6.dart';
 void main(){
   Room7 room7 = Room7();
 }
@@ -26,10 +26,22 @@ class Room7 {
       int randomNumber = numbers[0];
       numbers.removeAt(0);
       print(randomNumber);
+      if (randomNumber == 1) {
+        answer = false;
+        Room6 room6 = Room6();
+      } else if (randomNumber == 2) {
+        answer = false;
+        Room2 room2 = Room2();
+      } else if (randomNumber == 3) {
+        answer = false;
+        Room3 room3 = Room3();
+      } else {
+        print('Game over');
+      }
     } else if(yOrN == 'N'){
       while (answer) {
-        print("Enter the number: ");
-        intNumber = int.parse(stdin.readLineSync());
+
+        intNumber = getNumber();
         if (intNumber == 1) {
           answer = false;
           Room6 room6 = Room6();
@@ -42,6 +54,7 @@ class Room7 {
         } else {
           print('Game over');
         }
+      }
     }
   }
 }

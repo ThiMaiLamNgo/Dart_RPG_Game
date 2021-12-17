@@ -1,4 +1,6 @@
 import 'dart:io';
+
+import 'room5.dart';
 void main(){
   Room6 room6 = Room6();
 }
@@ -19,8 +21,7 @@ class Room6 {
         answer = false;
         print('Your answer is right. The Fibonacci of 5 is 120.');
         print('You got it. The letter is V');
-
-        Room5 room5 = Room5;
+        Room5 room5 = Room5();
       } else{
         print('It has to be another integer number!');
       }

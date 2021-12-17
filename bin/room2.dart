@@ -1,33 +1,22 @@
-import 'dart:io';
+import 'get_number.dart';
+import 'room1.dart';
+import 'room3.dart';
+import 'room5.dart';
 class Room2 {
-
-
   Room2() {
 
-    print('''This is coffee shop. There are there three numbers 1, 2 and 3 on table.
+    print('''There are there three numbers 1, 2 and 3 on table.
     \nChoose one of them to continue, other numbers make game over''');
-    bool answer= true;
-    String input;
-    int intNumber;
-    // ask user until he enters a number.
-    while (true) {
-      print("Enter the number: ");
-      input = stdin.readLineSync();
-      try {
-        intNumber = int.parse(input);
-        break;
-      }
-      on FormatException {
-        print('Wrong format');
-      }
-    }
-    // if the user enter 1 or 2 or 3 he can continue, enter other numbers the game is over.
+    int intNumber = getNumber();
     if(intNumber == 1){
       print('You are in Room3');
+      Room3 room3 = Room3();
     } else if(intNumber == 2){
       print('You are in Room5');
+      Room5 room5 = Room5();
     } else if(intNumber == 3){
       print('You are in Room1');
+      Room1 room1 = Room1();
     } else{
       print('Game over');
     }
