@@ -1,22 +1,19 @@
 import 'get_number.dart';
 import 'room1.dart';
-import 'room3.dart';
-import 'room5.dart';
+import 'room7.dart';
+
 class Room2 {
   Room2() {
-
-    print('''There are there three numbers 1, 2 and 3 on table.
-    \nChoose one of them to continue, other numbers make game over''');
+    print('''Room2: There are there three numbers 1, 2 and 3 on table.
+    \nChoose one of them to continue, other numbers make game over.
+    \n1 To Room1. \nTo Room7. \n Other number Game over.''');
     int intNumber = getNumber();
     if(intNumber == 1){
-      print('You are in Room3');
-      Room3();
-    } else if(intNumber == 2){
-      print('You are in Room5');
-      Room5();
-    } else if(intNumber == 3){
       print('You are in Room1');
       Room1();
+    } else if(intNumber == 2){
+      print('You are in Room6');
+      Room7();
     } else{
       print('Game over');
     }

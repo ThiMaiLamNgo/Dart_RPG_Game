@@ -1,18 +1,14 @@
 import 'dart:io';
-
+import 'room6.dart';
 import 'room5.dart';
-/*
-void main(){
-  Room4 room4 = Room4();
-}
- */
+
 class Room4 {
   String word = 'covid';
   List<String> displayWord = [];
-
   Room4(){
-    print('''You have to guess a word. This word is the most used word in the last 2 years.
-    \nThe word has ${word.length}  letter''');
+    print('''Room4: This room has the last key to open the door in Room5. You have to guess a word. 
+    \nThis word is the most used word in the last 2 years.
+    \nThe word has ${word.length}  letters''');
     displayWord = ('_' * (word.length)).split('');
     print(displayWord.join(''));
     String input;
@@ -31,7 +27,7 @@ class Room4 {
           if (displayWord.join('') == word) {
             answer = false;
             print('Bingo! The word of the year is ${displayWord.join('').toUpperCase()}');
-            print('\nThe key is a letter: Y. \n You are in Room5');
+            print('\nThe key is a letter: Y. \n You are in Room5\n');
             Room5();
           }
         } else {
@@ -39,7 +35,8 @@ class Room4 {
           print('Enter another letter.');
           if(incorrect >= 5){
             print('You have guessed wrong $incorrect times.');
-            print('Here is the hint: The word is the name of a disease');
+            print('You are back to Room6\n');
+            Room6();
           }
         }
     }

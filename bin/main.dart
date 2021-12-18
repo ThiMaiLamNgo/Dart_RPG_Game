@@ -1,44 +1,15 @@
 import 'user_name.dart';
 import 'start.dart';
 void main(List<String> arguments) {
-
-
-  // TODO 1: Get user´s name
   GetUserName();
-  // TODO 2: Choose 1 number to start Room1: 1,2,3,4.
   Start();
-  /*
-  //TODO 3: If choose 1 enter Room1 : 1,2:
-  Room1 room1 = Room1();
-  //Todo 4: if choose 2: enter room2;
-  Room3 room2 = Room3();
-   */
-
 }
-
-
-
-//TODO 4: help him to random the number 1,2,3 if he wants.
-//TODO 5: Ask a question if right go to m, wrong go to n. he can answer x times.
-//TODO 6: doan chu bat ky - 1 mini Hangman
-//TODo 7: fibon
-
-/*
-Choose assignment
-You have the option to choose between assignment 1, 2 or 3. Let your instructor known in a timely manner which assignment you intend to complete as your final degree project.
-1    Console: RPG Game
-Often when you are stuck in a spooky mansion, you have to solve some puzzles to escape.There are dangers involved and maybe even ghosts!We want you to create a RPG game where a user can navigate a mansion through a CLI interface. The game should describe each room and offer the player interactions to choose from. The interactions are for example
- •Pick up item
-•Move item
-•Break item
-•Move to next room
-It is up to you how you want to describe the rooms, text, ASCII?
-Minimum requirements (80%)
-•Allow navigation between rooms, where descriptions are included.
-•Allow user to select what to do in each room
-•At least 1 locked door which requires the user to find the key in another room
-
-Additional requirements (20%) - Pick one
-•A room that has a trap–User needs to find and bring an object to defeat the trap.
-A room that has a puzzle–For example - Read a book somewhere and there is a hint for a solution to apuzzle–Minigame?
- */
+// TODO START: Get user´s name
+// TODO START: Choose 1 number to start Room1 or Room8 or Game over.
+//TODO 1: Room1: Yes/No question. choose y go to Room7. Choose N - Wrong answer, the user still in Room1 and answers it again.
+//TODO 2: At Room7 there are three ways. 1 to Room6, 2 to Room2 and other numbers to quit game. Here you can choose to random(1 and 2) or user choices number by himself.
+//TODO 3: Room2 leads to Room1 or Room7.
+//TODO 4: Room6 user has to answer what the Fibonacci of 5? if he answers correctly he will get the letter is B and leads to Room3.
+//TODO 5:  Room3 user answer a question if correct he gets the second letter E and goes to Room4.
+//TODO 6: Room4 leads to Room5. At Room4 the user has to answer a question 'the most used word in the last 2 years?' if his answer is correct he gets the last letter. Then he goes to Room5.
+//TODO 7: Room5  The user enters the three letters if he knows otherwise he has

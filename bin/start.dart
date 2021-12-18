@@ -1,14 +1,14 @@
-import 'dart:io';
+import 'get_number.dart';
 import 'room1.dart';
 import 'room8.dart';
 
 class Start{
   int start;
   Start(){
-    print('''You are in a room inside the Perlan. There are two ways you can choice to start. 
+    print('''You are inside the Perlan. Choice 1 or 2 to start your journey. 
          \n1 Go ahead. \n2 Turn right.
-        \nEnter 1 or 2 to start your journey. And other numbers to get out of the game. ''');
-    start = int.parse(stdin.readLineSync());
+        \nOther numbers to get out of the game.\n''');
+    start = getNumber();
     if(start == 1){
       print('You are in Room1');
       Room1();
@@ -18,6 +18,5 @@ class Start{
     } else {
       print('You are out of the game.');
     }
-
   }
 }

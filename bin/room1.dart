@@ -1,11 +1,10 @@
 import 'dart:io';
-
 import 'room7.dart';
+
 class Room1 {
   String yesOrNo;
-
   Room1() {
-    print('''Welcome to the first task. The door to the next room is closed. So you have to answer the following question.
+    print('''Room1: Welcome to the first task. The door to the next room is closed. So you have to answer the following question.
          \nIs 1 the Fibonacci of 1? 
         ''');
     bool ans = true;
@@ -13,7 +12,7 @@ class Room1 {
       print('Enter Y or N: ');
       yesOrNo = stdin.readLineSync().toUpperCase();
       if (yesOrNo == 'Y') {
-        print('Now you are in the Room7');
+        print('Yes. The Fibonacci of 1 is 1. Now you are in the Room7');
         ans = false;
         Room7();
       } else if (yesOrNo == 'N') {
@@ -22,7 +21,7 @@ class Room1 {
         Room1();
       }
       else{
-        print('Enter Y or N');
+        print('Only Y or N please');
       }
     }
   }
