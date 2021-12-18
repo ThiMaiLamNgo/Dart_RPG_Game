@@ -4,6 +4,10 @@ import 'room3.dart';
 import 'room4.dart';
 import 'room6.dart';
 
+void main(){
+  Room5();
+}
+
 class Room5 {
   String keyWord = 'BYE';
   Room5() {
@@ -85,8 +89,20 @@ class Room5 {
       if(input == keyWord){
         ans = false;
         DateTime dt = DateTime.now();
+
         String timeEnd= "${dt.hour}:${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
-        print('YOU WON! S2 . \n You found the way out at $timeEnd');
+        print('');
+        print('\nYOU WON! The keyword is BYE \n You found the way out at $timeEnd');
+        print(
+            '''
+            + + + + +
+            + + + + +
+             + + + +
+               + +           
+                +
+                +
+              + + +  
+        ''');
       } else{
         counter ++;
         print('Try again. You have ${2 - counter} time to try it.');
