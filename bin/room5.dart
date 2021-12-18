@@ -4,9 +4,6 @@ import 'room3.dart';
 import 'room4.dart';
 import 'room6.dart';
 
-void main(){
-  Room5();
-}
 class Room5 {
   String keyWord = 'BYE';
   Room5() {
@@ -27,12 +24,15 @@ class Room5 {
         getLetters();//This function get letter from the user.
       } else if (yesOrNo == 'N') {// User enters N and chooses the room he want to come back.
         int enter = getNumber();
+        ans = false;
         if(enter == 3){
           Room3();
         } else if(enter == 4){
           Room4();
         } else if(enter == 6){
           Room6();
+        } else{
+          print('Game over.');
         }
       }
     }
@@ -48,19 +48,23 @@ class Room5 {
     while (answer) {
       print("Do you remember these three letters? Please enter them here: ");
       input = stdin.readLineSync().toUpperCase();
-      //If the user enter B; E or Y, it is added to the list named letters. The print the list to let user know what he entered.
+      //If the user enter B; E or Y, at the first time it is added to the list named letters and the variable correctCounter++. The print the list to let user know what he entered.
       if(input =='B' || input =='Y' || input =='E'){
-        letters.add(input);
-        correctCounter ++;
-        print('You entered: $letters. You need to enter ${3- correctCounter} more letters');
-        // if user enters correct these three letters while loop ends.
-        if(correctCounter == 3 && letters == ['B', 'Y', 'E'] || letters == ['B', 'E', 'Y'] ||  letters ==['E', 'Y', 'B'] || letters ==['E', 'B', 'Y'] ||  letters ==['Y', 'E', 'B'] ||  letters ==['Y', 'B', 'E']){
-          answer = false;
-          // once the while loop ends then user has to make a work from these three letters.
-          getWord();
+        if (!letters.contains(input)){
+          letters.add(input);
+          correctCounter ++;
+          print('You entered: $letters. You need to enter ${3- correctCounter} more letters');
+          //Ef user enters the ri
+          if(correctCounter == 3){
+            answer = false;
+            input = getWord();
+          }
+        } else{//If the user enter B; E or Y again he will get 'You have entered this letter'.
+          print('You have entered this letter');
         }
-
+        // if user enters correct these three letters while loop ends.
       } else{
+        //if user enters incorrect letter he gets 'Incorrect!' and the variable incorrectCounter++. if incorrectCounter > 4 the use has to go back to Room6.
         print('Incorrect!');
         incorrectCounter++;
         if(incorrectCounter >= 4){
@@ -71,23 +75,22 @@ class Room5 {
       }
     }
   }
-
   //This function take a word from use if his word is the same keyword then the user wins. Otherwise he comes back to Room5 again.
   getWord(){
     int counter = 0;
-    bool answer = true;
-    while (answer) {
+    bool ans = true;
+    while (ans) {
       print("From these three letters make a word. Enter the word here: ");
       String input = stdin.readLineSync().toUpperCase();
       if(input == keyWord){
-        answer = false;
+        ans = false;
         DateTime dt = DateTime.now();
-        String timeEnd= "${dt.hour} : ${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
+        String timeEnd= "${dt.hour}:${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
         print('YOU WON! S2 . \n You found the way out at $timeEnd');
       } else{
         counter ++;
         print('Try again. You have ${2 - counter} time to try it.');
-        if(counter >= 2){
+        if(counter >= 2 && input != keyWord){
           print('You are back to the Room5. \n');
           Room5();
         }

@@ -12,4 +12,4 @@ void main(List<String> arguments) {
 //TODO 4: Room6 user has to answer what the Fibonacci of 5? if he answers correctly he will get the letter is B and leads to Room3.
 //TODO 5:  Room3 user answer a question if correct he gets the second letter E and goes to Room4.
 //TODO 6: Room4 leads to Room5. At Room4 the user has to answer a question 'the most used word in the last 2 years?' if his answer is correct he gets the last letter. Then he goes to Room5.
-//TODO 7: Room5  The user enters the three letters if he knows otherwise he has
+//TODO 7: Room5  The user enters the three letters if he knows otherwise he has to go back to Room6.
