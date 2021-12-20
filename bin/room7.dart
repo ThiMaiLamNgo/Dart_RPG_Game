@@ -4,6 +4,7 @@ import 'get_number.dart';
 import 'room2.dart';
 import 'room6.dart';
 
+//TODO 2: At Room7 there are three ways. 1 to Room6, 2 to Room2 and other numbers to quit game. Here you can choose to random(1 and 2) or user choices number by himself.
 class Room7 {
   Room7() {
     print (''' Room7: There are there three choices. 1 go to Room6, 2 to Room2 and other numbers game over.

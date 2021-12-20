@@ -14,7 +14,7 @@ int getNumber( ) {
       answer = false;
     }
     on FormatException {
-      print('Wrong format');
+      print('Wrong format! \n');
     }
   }
   return intNumber;

@@ -11,10 +11,10 @@ class Room8 {
     if (input == 1){
       Room1();
     } else if (input == 2){
-      print('You are back to start.');
+      print('You are back to start.\n');
       Start();
     }else if (input == 3){
-      print('You go to Room6.');
+      print('You go to Room6.\n');
       Room6();
     } else{
       print('You are out of the game.');

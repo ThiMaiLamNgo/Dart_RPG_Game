@@ -1,11 +1,12 @@
 import 'get_number.dart';
 import 'room4.dart';
 
+//TODO 5:  Room3 user answer a question if correct he gets the second letter E and goes to Room4.
 class Room3 {
   int input;
   Room3() {
     print('''Room3: A big polar bear is sleeping. The next door is locked. You have to answer a question to open it. And get the second letter.
-    \nHow heavy are polar bears? P/S: Only an integer number is allowed.
+    \nHow heavy are polar bears? P/S: Only an integer number is allowed.\n
      ''');
     bool answer = true;
     while (answer){

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+// TODO START: Get user´s name
 class GetUserName{
   String name= '';
   GetUserName(){
@@ -8,7 +9,7 @@ class GetUserName{
       name = stdin.readLineSync();
     }
     DateTime dt = DateTime.now();
-    String timeStart= "${dt.hour} : ${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
+    String timeStart= "${dt.hour}:${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
     print('''Hello $name.\nWelcome to the Perlan - spooky mansion!
     \nTime and date now is $timeStart.
     \nThere are many people come in this house but no one finds the way to exit. 

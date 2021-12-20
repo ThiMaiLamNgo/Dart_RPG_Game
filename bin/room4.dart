@@ -2,6 +2,7 @@ import 'dart:io';
 import 'room6.dart';
 import 'room5.dart';
 
+//TODO 6: Room4 leads to Room5. At Room4 the user has to answer a question 'the most used word in the last 2 years?' if his answer is correct he gets the last letter. Then he goes to Room5.
 class Room4 {
   String word = 'covid';
   List<String> displayWord = [];

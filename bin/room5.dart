@@ -4,10 +4,8 @@ import 'room3.dart';
 import 'room4.dart';
 import 'room6.dart';
 
-void main(){
-  Room5();
-}
-
+//TODO 7: Room5  The user is asked whether he finishes Room3, Room4 or Room6. If he doesn´t so he enters N and chooses one of three numbers to come back.
+//TODO: If he finished the enters Y then enters the three key letters and make the keyword from three letters. If his word = keyword he wins. Otherwise he has to go back to Room6.
 class Room5 {
   String keyWord = 'BYE';
   Room5() {
@@ -92,7 +90,7 @@ class Room5 {
 
         String timeEnd= "${dt.hour}:${dt.minute} on ${dt.day}.${dt.month}.${dt.year}";
         print('');
-        print('\nYOU WON! The keyword is BYE \n You found the way out at $timeEnd');
+        print('\nYOU WON! The keyword is BYE \n You found the way out at $timeEnd \n');
         print(
             '''
             + + + + +
